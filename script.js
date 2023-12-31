@@ -23,7 +23,7 @@ imageLinks.forEach(function (link, index) {
 
   var div = document.createElement("div");
   var h2 = document.createElement("h2");
-  h2.textContent = "Custom Title";
+  h2.textContent = "❤️💗❤️";
 
   div.appendChild(h2);
   a.appendChild(img);
