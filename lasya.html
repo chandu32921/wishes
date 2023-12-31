@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('bg3.jpg') center/cover no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Pacifico', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align content to the left */
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .content {
+            text-align: left;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .title-container {
+            color: #fff;
+            margin: 20px;
+        }
+
+        .wishes-container {
+            text-align: left;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #333;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+
+            .wishes-container {
+                max-width: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+</head>
+<body>
+    <div class="title-container">
+        <h1>Happy birthday Madhu</h1>
+    </div>
+    <div class="content">
+        <div class="wishes-container" id="wishes-container">
+            <!-- Empty container for dynamic content insertion -->
+        </div>
+        <!-- Add more content as needed -->
+    </div>
+
+    <script>
+        const wishesText = "Happiest birthday madhu😘......My dear best friend!!! I am lucky to have a friend like you with whom I can express my thoughts and share my dreams. You are so caring, adorable, and intelligent . I am thankful for every moment we spend together, and I wish our happiness never ends. Once again I wish you a happy birthday";
+
+        const wishesContainer = document.getElementById("wishes-container");
+
+        function showTextLetterByLetter(text, container) {
+            container.innerHTML = "";
+            text.split("").forEach((char, index) => {
+                setTimeout(() => {
+                    container.innerHTML += char;
+                }, index * 50);
+            });
+        }
+
+        showTextLetterByLetter(wishesText, wishesContainer);
+    </script>
+</body>
+</html>
